@@ -1,0 +1,7 @@
+{
+    "css.validate": false,
+    "stylelint.enable": true,
+    "stylelint.config": {
+        "string": "never-multi-line"
+    },
+}
