@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
-    "stylelint-config-recommended",
-    'stylelint-config-standard'
+    'stylelint-config-recommended'
   ],
   // add your custom config here
   // https://stylelint.io/user-guide/configuration
@@ -13,6 +12,6 @@ module.exports = {
       ]
     }],
     "block-no-empty": null,
-    "unit-whitelist": ["em", "rem", "s"]
+    // "unit-whitelist": ["em", "rem", "s"]
   }
 }
