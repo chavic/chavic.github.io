@@ -47,7 +47,7 @@
     "babel-jest": "^26.5.0",
     "eslint": "^7.15.0",
     "eslint-plugin-nuxt": "^1.0.0",
-    "husky": "^4.3.0",
+    "husky": "^4.3.8",
     "jest": "^26.5.0",
     "lint-staged": "^10.4.0",
     "push-dir": "^0.4.1",
