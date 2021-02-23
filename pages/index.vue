@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <div>Site in Working Progress</div>
-  </div>
+  <div></div>
 </template>
 
 <script lang="ts">
