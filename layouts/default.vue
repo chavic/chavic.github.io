@@ -21,4 +21,15 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+.action-btn {
+  height: 43px;
+  border: 1px solid #181818;
+  border-radius: 12px;
+}
+
+.action-btn:hover {
+  color: white;
+  background: #181818;
+}
 </style>
