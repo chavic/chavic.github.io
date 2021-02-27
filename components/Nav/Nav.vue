@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="w-full h-16 lg:pt-2 flex flex-col lg:flex-row text-2xl lg:text-lg font-bold text-dark-primary"
+    class="w-full h-16 fixed lg:pt-2 flex flex-col lg:flex-row text-2xl lg:text-lg font-bold text-dark-primary"
   >
     <div class="w-full lg:w-24 h-16 flex">
       <div class="w-24 md:w-40 h-full flex">
@@ -27,7 +27,7 @@
 
     <div
       v-if="open"
-      class="w-full min-h-screen h-screen lg:h-auto lg:min-h-full flex flex-col lg:flex-row flex-grow-0"
+      class="w-full min-h-screen h-screen lg:h-auto lg:min-h-full flex flex-col lg:flex-row flex-grow-0 bg-white"
     >
       <!-- Navigation Links -->
       <!-- TODO: Add Animation To Bar -->
@@ -114,12 +114,29 @@ export default Vue.extend({
       open: false,
     }
   },
+  mounted() {
+    this.shouldOpen()
+    window.addEventListener('resize', this.shouldOpen)
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.shouldOpen)
+  },
   methods: {
     swichIndex(newIndex: number) {
       this.index = newIndex
     },
     toggleMenu() {
       this.open = !this.open
+    },
+    shouldOpen() {
+      if (process.client) {
+        const isMobile = document.body.clientWidth < 1024
+        if (!isMobile) {
+          this.$data.open = true
+        } else if (isMobile) {
+          return (this.$data.open = false)
+        }
+      }
     },
   },
 })
