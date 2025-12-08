@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/email/sent", {data:[{status:"sent"}],fetch:{},mutations:void 0});

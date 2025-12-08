@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/email/failed", {data:[{status:"failed"}],fetch:{},mutations:void 0});
